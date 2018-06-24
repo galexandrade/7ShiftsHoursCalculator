@@ -6,13 +6,37 @@
 Description:
 This load the data (users, locations, timePunches) from an endpoint end calculate the hours a user worked over all.
 The program calculate the regular hours, as well as daily and weekly overtime hours. Overtime rules come from a location’s setting. Overtime is triggered one of two ways. If an employee works more than X hours a day (daily overtime), or more than Y hours a week (weekly overtime). Overtime is paid for whichever overtime number is greater.
+
+Create a REST API (/api/v1/hours/{userId}) that retrive the calculated data. 
  
+Live: https://sevenshifts-hours-calculator.herokuapp.com/swagger-ui.html
  
  Technologies applied:
- * Springboot
- * TDD (JUnit, Mokito)
- * Project Lombok
- * Swagger
- * CircleCI
- * Codcov.io
+ * Gradle - Dependencies management
+ * Springboot - Java Framework
+ * TDD (JUnit) - Tests 
+ * Project Lombok - Getters and Setters, Constructors
+ * Swagger - API Documentation
+ * CircleCI - Continuous Integration
+ * Codcov.io - Tests coverage
  
+Run in local environment:
+
+1 - Install Gradle
+
+    https://gradle.org/install/ 
+    
+2 - Run tests (Command line)
+
+    gradlew test
+    
+3 - Run project
+
+    gradle bootRun
+    
+
+**Author**
+
+Name: Alex P. Andrade
+
+Email: g.alex.andrade@gmail.com
