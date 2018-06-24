@@ -20,6 +20,10 @@ group = 'com.7shifts.api.hours.calculator'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
+ext {
+	swaggerVersion = "2.7.0"
+}
+
 repositories {
 	mavenCentral()
 }
@@ -30,6 +34,10 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	runtime('org.springframework.boot:spring-boot-devtools')
 	compile("com.fasterxml.jackson.core:jackson-databind")
+
+	compile group: 'io.springfox', name: 'springfox-swagger2', version: "${swaggerVersion}"
+	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: "${swaggerVersion}"
+
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

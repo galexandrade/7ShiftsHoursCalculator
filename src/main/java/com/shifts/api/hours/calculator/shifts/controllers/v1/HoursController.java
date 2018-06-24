@@ -3,6 +3,8 @@ package com.shifts.api.hours.calculator.shifts.controllers.v1;
 import com.shifts.api.hours.calculator.shifts.model.WorkTime;
 import com.shifts.api.hours.calculator.shifts.services.HoursService;
 import com.shifts.api.hours.calculator.shifts.services.HoursServiceImpl;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +16,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping(HoursController.BASE_URL)
+@Api(description = "Hours Controller - Swagger")
 public class HoursController {
     public static final String BASE_URL = "/api/v1/hours";
     private final HoursService hoursService;
@@ -24,6 +27,7 @@ public class HoursController {
 
     @GetMapping("/{userId}")
     @ResponseStatus(HttpStatus.OK)
+    @ApiOperation(value = "Get the worked hours of the given user.")
     public List<WorkTime> getUserWorkHours(@PathVariable Long userId) throws IOException {
         return this.hoursService.calculateWorkHours(userId);
     }
