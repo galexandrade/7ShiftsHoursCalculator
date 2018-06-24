@@ -16,6 +16,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping(HoursController.BASE_URL)
+@CrossOrigin
 @Api(description = "Hours Controller - Swagger")
 public class HoursController {
     public static final String BASE_URL = "/api/v1/hours";

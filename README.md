@@ -35,6 +35,13 @@ Run in local environment:
     gradle bootRun
     
 
+BUNUS 1
+
+Due to internet connection issues, I was not able to develop with Angular, as I intend, so I implemented the solution with pure JavaScript + Jquery 
+
+    Available in: /resources/static/index.html
+
+
 **Author**
 
 Name: Alex P. Andrade
